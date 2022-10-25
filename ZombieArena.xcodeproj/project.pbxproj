@@ -43,6 +43,7 @@
 		507C16E72907D69D00D41D64 /* sfml-network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-network.framework"; path = "../../../../../Library/Frameworks/sfml-network.framework"; sourceTree = "<group>"; };
 		507C16EE2907D71D00D41D64 /* player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
 		507C16EF2907D71D00D41D64 /* player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = player.hpp; sourceTree = "<group>"; };
+		507C16F12907E15000D41D64 /* ZombieArena.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZombieArena.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				507C16E82907D69D00D41D64 /* sfml-audio.framework in Frameworks */,
 				507C16E92907D69D00D41D64 /* SFML.framework in Frameworks */,
+				507C16E82907D69D00D41D64 /* sfml-audio.framework in Frameworks */,
 				507C16EA2907D69D00D41D64 /* sfml-system.framework in Frameworks */,
 				507C16EB2907D69D00D41D64 /* sfml-graphics.framework in Frameworks */,
 				507C16EC2907D69D00D41D64 /* sfml-window.framework in Frameworks */,
@@ -83,6 +84,7 @@
 		507C16D52907D5A300D41D64 /* ZombieArena */ = {
 			isa = PBXGroup;
 			children = (
+				507C16F12907E15000D41D64 /* ZombieArena.entitlements */,
 				507C16EE2907D71D00D41D64 /* player.cpp */,
 				507C16EF2907D71D00D41D64 /* player.hpp */,
 				507C16D62907D5A300D41D64 /* main.cpp */,
@@ -214,6 +216,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -272,6 +275,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -290,6 +294,7 @@
 		507C16DB2907D5A300D41D64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ZombieArena/ZombieArena.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z6783A24XK;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -304,6 +309,7 @@
 		507C16DC2907D5A300D41D64 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ZombieArena/ZombieArena.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z6783A24XK;
 				ENABLE_HARDENED_RUNTIME = YES;
