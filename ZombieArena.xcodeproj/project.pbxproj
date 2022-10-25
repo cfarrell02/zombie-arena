@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		507C16D72907D5A300D41D64 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 507C16D62907D5A300D41D64 /* main.cpp */; };
+		507C16E82907D69D00D41D64 /* sfml-audio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C16E22907D69D00D41D64 /* sfml-audio.framework */; };
+		507C16E92907D69D00D41D64 /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C16E32907D69D00D41D64 /* SFML.framework */; };
+		507C16EA2907D69D00D41D64 /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C16E42907D69D00D41D64 /* sfml-system.framework */; };
+		507C16EB2907D69D00D41D64 /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C16E52907D69D00D41D64 /* sfml-graphics.framework */; };
+		507C16EC2907D69D00D41D64 /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C16E62907D69D00D41D64 /* sfml-window.framework */; };
+		507C16ED2907D69D00D41D64 /* sfml-network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C16E72907D69D00D41D64 /* sfml-network.framework */; };
+		507C16F02907D71D00D41D64 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 507C16EE2907D71D00D41D64 /* player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,17 @@
 /* Begin PBXFileReference section */
 		507C16D32907D5A300D41D64 /* ZombieArena */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ZombieArena; sourceTree = BUILT_PRODUCTS_DIR; };
 		507C16D62907D5A300D41D64 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		507C16DE2907D62A00D41D64 /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sound; sourceTree = "<group>"; };
+		507C16DF2907D62A00D41D64 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		507C16E02907D62A00D41D64 /* graphics */ = {isa = PBXFileReference; lastKnownFileType = folder; path = graphics; sourceTree = "<group>"; };
+		507C16E22907D69D00D41D64 /* sfml-audio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-audio.framework"; path = "../../../../../Library/Frameworks/sfml-audio.framework"; sourceTree = "<group>"; };
+		507C16E32907D69D00D41D64 /* SFML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFML.framework; path = ../../../../../Library/Frameworks/SFML.framework; sourceTree = "<group>"; };
+		507C16E42907D69D00D41D64 /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../../../../../Library/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
+		507C16E52907D69D00D41D64 /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-graphics.framework"; path = "../../../../../Library/Frameworks/sfml-graphics.framework"; sourceTree = "<group>"; };
+		507C16E62907D69D00D41D64 /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "../../../../../Library/Frameworks/sfml-window.framework"; sourceTree = "<group>"; };
+		507C16E72907D69D00D41D64 /* sfml-network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-network.framework"; path = "../../../../../Library/Frameworks/sfml-network.framework"; sourceTree = "<group>"; };
+		507C16EE2907D71D00D41D64 /* player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
+		507C16EF2907D71D00D41D64 /* player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = player.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +50,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				507C16E82907D69D00D41D64 /* sfml-audio.framework in Frameworks */,
+				507C16E92907D69D00D41D64 /* SFML.framework in Frameworks */,
+				507C16EA2907D69D00D41D64 /* sfml-system.framework in Frameworks */,
+				507C16EB2907D69D00D41D64 /* sfml-graphics.framework in Frameworks */,
+				507C16EC2907D69D00D41D64 /* sfml-window.framework in Frameworks */,
+				507C16ED2907D69D00D41D64 /* sfml-network.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +65,10 @@
 		507C16CA2907D5A300D41D64 = {
 			isa = PBXGroup;
 			children = (
+				507C16DD2907D60A00D41D64 /* Resources */,
 				507C16D52907D5A300D41D64 /* ZombieArena */,
 				507C16D42907D5A300D41D64 /* Products */,
+				507C16E12907D69D00D41D64 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +83,34 @@
 		507C16D52907D5A300D41D64 /* ZombieArena */ = {
 			isa = PBXGroup;
 			children = (
+				507C16EE2907D71D00D41D64 /* player.cpp */,
+				507C16EF2907D71D00D41D64 /* player.hpp */,
 				507C16D62907D5A300D41D64 /* main.cpp */,
 			);
 			path = ZombieArena;
+			sourceTree = "<group>";
+		};
+		507C16DD2907D60A00D41D64 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				507C16DF2907D62A00D41D64 /* fonts */,
+				507C16E02907D62A00D41D64 /* graphics */,
+				507C16DE2907D62A00D41D64 /* sound */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		507C16E12907D69D00D41D64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				507C16E22907D69D00D41D64 /* sfml-audio.framework */,
+				507C16E52907D69D00D41D64 /* sfml-graphics.framework */,
+				507C16E72907D69D00D41D64 /* sfml-network.framework */,
+				507C16E42907D69D00D41D64 /* sfml-system.framework */,
+				507C16E62907D69D00D41D64 /* sfml-window.framework */,
+				507C16E32907D69D00D41D64 /* SFML.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				507C16F02907D71D00D41D64 /* player.cpp in Sources */,
 				507C16D72907D5A300D41D64 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +293,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z6783A24XK;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -251,6 +307,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z6783A24XK;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
