@@ -8,7 +8,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "player.hpp"
-
+#include "main.hpp"
 int main()
 {
     enum class State {PAUSED, LEVELING_UP,GAME_OVER,PLAYING};
@@ -32,7 +32,9 @@ int main()
     Player player;
     IntRect arena;
     
-
+    VertexArray background;
+    Texture textureBackground;
+    textureBackground.loadFromFile("../Resources/graphics/background_sheet.png");
     while (window.isOpen())
     {
         sf::Event event;
@@ -59,6 +61,7 @@ int main()
         if(Keyboard::isKeyPressed(Keyboard::Escape)){
             window.close();
         }
+
         //Handles controls
         if(state == State::PLAYING){
             if(Keyboard::isKeyPressed(Keyboard::W)){
@@ -98,7 +101,7 @@ int main()
                 arena.left = 0;
                 arena.top = 0;
                 
-                int tileSize = 50;
+                int tileSize = createBackground(background,arena);
                 
                 player.spawn(arena, resolution, tileSize);
                 
@@ -117,11 +120,11 @@ int main()
             
             mouseWorldPosition = window.mapPixelToCoords(Mouse::getPosition(),mainView);
             
-            player.update(dtAsSeconds,Mouse::getPosition());
+            player.update(dtAsSeconds,mouseScreenPosition);
             
             Vector2f playerPosition(player.getCenter());
             
-            mainView.setCenter(player.getCenter());
+            mainView.setCenter(playerPosition);
         }
     
         //DRAW THE SCENE
@@ -130,7 +133,7 @@ int main()
             window.clear();
             
             window.setView(mainView);
-            
+            window.draw(background, &textureBackground);
             window.draw(player.getSprite());
         }
         if(state == State::LEVELING_UP){

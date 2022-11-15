@@ -15,6 +15,7 @@
 		507C16EC2907D69D00D41D64 /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C16E62907D69D00D41D64 /* sfml-window.framework */; };
 		507C16ED2907D69D00D41D64 /* sfml-network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C16E72907D69D00D41D64 /* sfml-network.framework */; };
 		507C16F02907D71D00D41D64 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 507C16EE2907D71D00D41D64 /* player.cpp */; };
+		50D970D32923952D0062187F /* createBackground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50D970D22923952D0062187F /* createBackground.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,8 @@
 		507C16EE2907D71D00D41D64 /* player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
 		507C16EF2907D71D00D41D64 /* player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = player.hpp; sourceTree = "<group>"; };
 		507C16F12907E15000D41D64 /* ZombieArena.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZombieArena.entitlements; sourceTree = "<group>"; };
+		50D970D1292394AC0062187F /* main.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
+		50D970D22923952D0062187F /* createBackground.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = createBackground.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +87,12 @@
 		507C16D52907D5A300D41D64 /* ZombieArena */ = {
 			isa = PBXGroup;
 			children = (
+				50D970D1292394AC0062187F /* main.hpp */,
 				507C16F12907E15000D41D64 /* ZombieArena.entitlements */,
 				507C16EE2907D71D00D41D64 /* player.cpp */,
 				507C16EF2907D71D00D41D64 /* player.hpp */,
 				507C16D62907D5A300D41D64 /* main.cpp */,
+				50D970D22923952D0062187F /* createBackground.cpp */,
 			);
 			path = ZombieArena;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			files = (
 				507C16F02907D71D00D41D64 /* player.cpp in Sources */,
 				507C16D72907D5A300D41D64 /* main.cpp in Sources */,
+				50D970D32923952D0062187F /* createBackground.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
