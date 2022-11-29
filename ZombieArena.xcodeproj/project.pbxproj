@@ -15,7 +15,10 @@
 		507C16EC2907D69D00D41D64 /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C16E62907D69D00D41D64 /* sfml-window.framework */; };
 		507C16ED2907D69D00D41D64 /* sfml-network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C16E72907D69D00D41D64 /* sfml-network.framework */; };
 		507C16F02907D71D00D41D64 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 507C16EE2907D71D00D41D64 /* player.cpp */; };
+		508AB81B2936066700DD5D85 /* zombie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 508AB8192936066700DD5D85 /* zombie.cpp */; };
+		508AB81D29360A5300DD5D85 /* zombieHorde.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 508AB81C29360A5300DD5D85 /* zombieHorde.cpp */; };
 		50D970D32923952D0062187F /* createBackground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50D970D22923952D0062187F /* createBackground.cpp */; };
+		50F8F642292CD58E00F53D21 /* textureHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F8F640292CD58E00F53D21 /* textureHolder.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,8 +48,13 @@
 		507C16EE2907D71D00D41D64 /* player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
 		507C16EF2907D71D00D41D64 /* player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = player.hpp; sourceTree = "<group>"; };
 		507C16F12907E15000D41D64 /* ZombieArena.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZombieArena.entitlements; sourceTree = "<group>"; };
+		508AB8192936066700DD5D85 /* zombie.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = zombie.cpp; sourceTree = "<group>"; };
+		508AB81A2936066700DD5D85 /* zombie.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = zombie.hpp; sourceTree = "<group>"; };
+		508AB81C29360A5300DD5D85 /* zombieHorde.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = zombieHorde.cpp; sourceTree = "<group>"; };
 		50D970D1292394AC0062187F /* main.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
 		50D970D22923952D0062187F /* createBackground.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = createBackground.cpp; sourceTree = "<group>"; };
+		50F8F640292CD58E00F53D21 /* textureHolder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = textureHolder.cpp; sourceTree = "<group>"; };
+		50F8F641292CD58E00F53D21 /* textureHolder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = textureHolder.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,11 @@
 				507C16EF2907D71D00D41D64 /* player.hpp */,
 				507C16D62907D5A300D41D64 /* main.cpp */,
 				50D970D22923952D0062187F /* createBackground.cpp */,
+				50F8F640292CD58E00F53D21 /* textureHolder.cpp */,
+				50F8F641292CD58E00F53D21 /* textureHolder.hpp */,
+				508AB8192936066700DD5D85 /* zombie.cpp */,
+				508AB81A2936066700DD5D85 /* zombie.hpp */,
+				508AB81C29360A5300DD5D85 /* zombieHorde.cpp */,
 			);
 			path = ZombieArena;
 			sourceTree = "<group>";
@@ -177,8 +190,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				508AB81D29360A5300DD5D85 /* zombieHorde.cpp in Sources */,
 				507C16F02907D71D00D41D64 /* player.cpp in Sources */,
+				50F8F642292CD58E00F53D21 /* textureHolder.cpp in Sources */,
 				507C16D72907D5A300D41D64 /* main.cpp in Sources */,
+				508AB81B2936066700DD5D85 /* zombie.cpp in Sources */,
 				50D970D32923952D0062187F /* createBackground.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
