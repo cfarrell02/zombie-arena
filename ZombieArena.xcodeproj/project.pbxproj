@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50235CA6293F433A000FC14F /* bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50235CA4293F433A000FC14F /* bullet.cpp */; };
 		507C16D72907D5A300D41D64 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 507C16D62907D5A300D41D64 /* main.cpp */; };
 		507C16E82907D69D00D41D64 /* sfml-audio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C16E22907D69D00D41D64 /* sfml-audio.framework */; };
 		507C16E92907D69D00D41D64 /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507C16E32907D69D00D41D64 /* SFML.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		50235CA4293F433A000FC14F /* bullet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bullet.cpp; sourceTree = "<group>"; };
+		50235CA5293F433A000FC14F /* bullet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = bullet.hpp; sourceTree = "<group>"; };
 		507C16D32907D5A300D41D64 /* ZombieArena */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ZombieArena; sourceTree = BUILT_PRODUCTS_DIR; };
 		507C16D62907D5A300D41D64 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		507C16DE2907D62A00D41D64 /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sound; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 				508AB8192936066700DD5D85 /* zombie.cpp */,
 				508AB81A2936066700DD5D85 /* zombie.hpp */,
 				508AB81C29360A5300DD5D85 /* zombieHorde.cpp */,
+				50235CA4293F433A000FC14F /* bullet.cpp */,
+				50235CA5293F433A000FC14F /* bullet.hpp */,
 			);
 			path = ZombieArena;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50235CA6293F433A000FC14F /* bullet.cpp in Sources */,
 				508AB81D29360A5300DD5D85 /* zombieHorde.cpp in Sources */,
 				507C16F02907D71D00D41D64 /* player.cpp in Sources */,
 				50F8F642292CD58E00F53D21 /* textureHolder.cpp in Sources */,

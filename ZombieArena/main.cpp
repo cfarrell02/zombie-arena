@@ -10,6 +10,7 @@
 #include "player.hpp"
 #include "main.hpp"
 #include "textureHolder.hpp"
+#include "bullet.hpp"
 
 int main()
 {
@@ -41,6 +42,20 @@ int main()
     int numZombies = 0;
     int numZombiesAlive = 0;
     Zombie* zombies = nullptr;
+    Bullet bullets[100];
+    int currentBullet = 0;
+    int bulletsSpare = 24;
+    int bulletsInClip = 6;
+    int clipSize = 6;
+    float fireRate = 1;
+    
+    Time lastPressed;
+    
+    window.setMouseCursorVisible(false);
+    Sprite spriteCrosshair;
+    Texture textureCrosshair = TextureHolder::GetTexture("../Resources/graphics/crosshair.png");
+    spriteCrosshair.setTexture(textureCrosshair);
+    spriteCrosshair.setOrigin(25, 25);
     while (window.isOpen())
     {
         sf::Event event;
@@ -63,6 +78,20 @@ int main()
                     
                 }
             }
+            if(state == State::PLAYING){
+                if(event.key.code == Keyboard::R){
+                    if(bulletsSpare >= clipSize){
+                        bulletsInClip = clipSize;
+                        bulletsSpare -= clipSize;
+                    }
+                    else if(bulletsSpare > 0){
+                        bulletsInClip = bulletsSpare;
+                        bulletsSpare = 0;
+                    }else{
+                        //More Here
+                    }
+                }
+            }
         }
         if(Keyboard::isKeyPressed(Keyboard::Escape)){
             window.close();
@@ -83,6 +112,20 @@ int main()
             if(Keyboard::isKeyPressed(Keyboard::D))
                 player.moveRight();
             else player.stopRight();
+            
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                if(gameTimeTotal.asMilliseconds() - lastPressed.asMilliseconds() > 1000/fireRate && bulletsInClip>0){
+                    bullets[currentBullet].shoot(player.getCenter().x, player.getCenter().y,
+                                                 mouseWorldPosition.x, mouseWorldPosition.y - resolution.y);
+                    ++currentBullet;
+                    if(currentBullet > 99){
+                        currentBullet = 0;
+                    }
+                    lastPressed = gameTimeTotal;
+                    bulletsInClip--;
+                    
+                }
+            }
         }
         //Handles leveling up state
         if(state == State::LEVELING_UP){
@@ -120,6 +163,7 @@ int main()
             }
         }
         //UPDATE THE FRAME
+        
         if(state == State::PLAYING){
             Time dt = clock.restart();
             
@@ -130,7 +174,7 @@ int main()
             mouseScreenPosition = Mouse::getPosition(window);
             
             mouseWorldPosition = window.mapPixelToCoords(Mouse::getPosition(),mainView);
-            
+            spriteCrosshair.setPosition(mouseWorldPosition.x, mouseWorldPosition.y - resolution.y);
             player.update(dtAsSeconds,mouseScreenPosition);
             
             Vector2f playerPosition(player.getCenter());
@@ -139,6 +183,12 @@ int main()
             
             for(int i = 0 ; i<numZombies;++i){
                 if(zombies[i].isAlive()) zombies[i].update(dt.asSeconds(), playerPosition);
+            }
+            
+            for(int i =0; i< 100; i++){
+                if(bullets[i].isInFlight()){
+                    bullets[i].update(dtAsSeconds);
+                }
             }
         }
     
@@ -152,7 +202,11 @@ int main()
             for(int i = 0; i< numZombies;++i){
                 window.draw(zombies[i].getSprite());
             }
+            for(int i = 0; i<100; i++){
+                window.draw(bullets[i].getShape());
+            }
             window.draw(player.getSprite());
+            window.draw(spriteCrosshair);
         }
         if(state == State::LEVELING_UP){
             
